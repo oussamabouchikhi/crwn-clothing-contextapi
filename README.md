@@ -1,22 +1,24 @@
-# react-context-lesson
-We are going to replace our local state management from redux to the new context API. This repository is our application before we introduced sagas to handle our asynchronous code, which is a good starting point to make the appropriate changes!
+# crwn-clothing-contextapi
 
-# How to fork and clone
-
-One quick note about cloning this project. If you wish to make commits and push the code up after cloning this repo, you should fork the project first. In order to own your own copy of this repository, you have to fork it so you get your own copy on your own profile!
-
-You can see the fork button in the top right corner of every GitHub project; click it and a copy of the project will be added to your GitHub profile under the same name as the original project.
-
-![alt text](https://i.ibb.co/1YN7SJ6/Screen-Shot-2019-07-01-at-2-02-40-AM.png "image to fork button")
-
-After forking the project, simply clone it the way you would from the new forked project in your own GitHub repository and you can commit and push to it freely!
+Replace local state management from redux to the new context API.
 
 
-# After you fork and clone:
+## After you fork and clone:
+```bash
+~ git clone https://github.com/oussamabouchikhi/crwn-clothing-contextapi.git
+```
 
 ## Install dependencies
 
-In your terminal after you clone your project down, remember to run either `yarn` or `npm install` to build all the dependencies in the project.
+To install all project dependencies, run these commands
+```bash
+#1. 
+~ cd crwn-clothing-contextapi
+#2. 
+~ yarn
+# or
+~ npm install
+```
 
 ## Set your firebase config
 
@@ -35,7 +37,8 @@ Set the `publishableKey` variable in the `stripe-button.component.jsx` with your
 
 You will also need to connect your existing Heroku app to this new forked and cloned repo, or you have to create a new Heroku app and push to it. A quick refresher on how to do either of these:
 
-## Set to an existing Heroku app
+<details>
+<summary>Set to an existing Heroku app</summary>
 
 To set to an existing Heroku app you already have deployed, you need to know the name of the app you want to deploy to. To see a list of all the apps you currently have on Heroku:
 
@@ -52,10 +55,11 @@ heroku git:remote -a <PASTE_YOUR_APP_NAME_HERE>
 And now you'll have your repo connected to the heroku app under the git remote name `heroku`.
 
 Then skip to the bottom of this article to see what to do next!
+</details>
 
-
-## To create a new Heroku app
-
+<details>
+<summary>Create a new Heroku app</summary>
+<br>
 Create a new Heroku project by typing in your terminal:
 
 ```
@@ -69,9 +73,10 @@ git remote -v
 ```
 
 You should see heroku `https://git.heroku.com/<RANDOMLY_GENERATED_NAME_OF_YOUR_APP>` in the list. This means you have successfully connected your project to the newly created Heroku app under the git remote of `heroku`.
+</details>
 
-
-## Deploying to Heroku
+<details>
+<summary>Deploying to Heroku</summary>
 
 Add the `mars/create-react-app-buildpack` to your heroku project by typing:
 
@@ -105,8 +110,10 @@ git push heroku master --force
 
 This will overwrite the existing Heroku app with our new code.
 
+</details>
 
-## Open our Heroku project
+<details>
+<summary>Open our Heroku project</summary>
 
 After heroku finishes building our project, we can simply run:
 
@@ -115,3 +122,4 @@ heroku open
 ```
 
 This will open up our browser and take us to our newly deployed Heroku project!
+</details>
